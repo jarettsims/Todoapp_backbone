@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+￼<html lang="en">
+￼<head>
+	<meta charset="UTF-8">
+	<title>Todo App</title>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+	<h1>My Todo List</h1>
+
+	<form>
+		<label>
+			Todo:
+			<input type="text" name="name" placeholder="be monsterful" >
+		</label>
+	</form>
+
+	<!-- this ul is a Backbone Collection ... a list of Todos given to us by calling fetch() which goes to the server and returns us an array of all the todos  -->
+	<ul id="todos">
+
+	</ul>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+	<script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+
+	<!-- Templates -->
+
+	<script type="text/javascript" id='todo-template'>
+		<p> Todo: <%= name %> </p>
+		<button data-action='destroy'>
+			Delete
+		</button>
+		<button data-action='edit'>
+			Edit
+		</button>
+	</script>
+
+
+	<!-- Backbone App -->
+
+  <script type="text/javascript" src="/backbone/main.js"></script>
+  <script type="text/javascript" src="/backbone/Todo.js"></script>
+  <script type="text/javascript" src="/backbone/TodoCollection.js"></script>
+  <script type="text/javascript" src="/backbone/TodoView.js"></script>
+  <script type="text/javascript" src="/backbone/TodoViewListView.js"></script>
+</body>
+</html>	
